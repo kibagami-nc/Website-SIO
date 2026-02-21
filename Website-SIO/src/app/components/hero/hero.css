@@ -1,0 +1,18 @@
+@reference "../../../styles.css";
+
+.hero-section {
+    @apply flex flex-col items-center justify-center text-center pt-48 pb-20 min-h-[60vh];
+}
+
+.hero-title {
+    @apply text-5xl md:text-7xl font-black mb-6 tracking-tight text-white;
+}
+
+.hero-subtitle {
+    @apply text-xl md:text-2xl text-white mb-10 max-w-2xl mx-auto;
+}
+
+.btn-primary {
+    @apply px-8 py-4 bg-blue-600 text-white font-bold rounded-full transition-all duration-300 cursor-pointer;
+    @apply hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-lg;
+}
