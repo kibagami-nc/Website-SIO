@@ -1,0 +1,36 @@
+@reference "../../../styles.css";
+
+:host {
+  @apply block;
+}
+
+.navbar-container {
+  @apply fixed top-0 left-0 w-full z-50 h-20;
+  @apply backdrop-blur-[2px] bg-white/5;
+}
+
+.navbar-content {
+  @apply w-full h-full flex items-center justify-between px-8;
+}
+
+.logo-wrapper {
+  @apply flex items-center;
+}
+
+.navbar-logo {
+  @apply h-12 w-auto object-contain;
+}
+
+.text-wrapper {
+  @apply absolute left-1/2 -translate-x-1/2 text-center;
+}
+
+.navbar-title {
+  @apply text-sm md:text-base font-bold tracking-widest text-white uppercase;
+  font-family: 'Inter', sans-serif;
+}
+
+.right-spacer {
+  @apply w-12;
+  /* Matches logo width area for centering balance */
+}

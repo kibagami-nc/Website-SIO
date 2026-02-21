@@ -1,0 +1,28 @@
+@reference "../../../styles.css";
+
+.features-section {
+    @apply py-12 -mt-24 relative z-20;
+}
+
+.features-grid {
+    @apply container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6;
+}
+
+.feature-card {
+    @apply bg-white rounded-[2.5rem] p-12 flex flex-col items-center text-center shadow-2xl transition-transform duration-300;
+    @apply hover:-translate-y-2;
+    min-height: 400px;
+}
+
+.icon-wrapper {
+    @apply mb-8 text-black;
+}
+
+.feature-icon {
+    @apply w-12 h-12;
+}
+
+.feature-title {
+    @apply text-black font-bold text-lg leading-snug uppercase tracking-tight;
+    max-width: 200px;
+}
