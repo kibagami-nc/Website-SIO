@@ -4,13 +4,13 @@
     display: block;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../background.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/background.png') no-repeat center center;
     background-size: cover;
     color: white;
 }
 
 .hero-section {
-    @apply flex flex-col items-center justify-center text-center pt-48 pb-20 min-h-[60vh];
+    @apply flex flex-col items-center justify-center text-center pt-64 pb-32 min-h-[70vh];
 }
 
 .hero-title {
@@ -22,6 +22,6 @@
 }
 
 .btn-primary {
-    @apply px-8 py-4 bg-blue-600 text-white font-bold rounded-full transition-all duration-300 cursor-pointer;
-    @apply hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-lg;
+    @apply px-5 py-3 bg-[#039EE4] text-white font-bold rounded-full transition-all duration-300 cursor-pointer mb-12;
+    @apply hover:bg-[#0288c5] hover:scale-105 active:scale-95 shadow-lg;
 }

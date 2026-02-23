@@ -1,16 +1,49 @@
 @reference "../../../styles.css";
 
 .navbar-container {
-  @apply fixed top-0 left-0 w-full z-500 h-20;
-  @apply backdrop-blur-[2px] bg-white/5;
+  @apply fixed top-0 left-0 w-full z-[100] h-20;
+  @apply backdrop-blur-[4px] bg-white/5;
 }
 
 .navbar-content {
-  @apply w-full h-full flex items-center justify-between px-8;
+  @apply w-full h-full flex items-center justify-between px-8 flex-wrap md:flex-nowrap gap-4;
 }
 
 .navbar-logo {
   @apply h-20 w-auto object-contain;
+}
+
+.button-52 {
+  @apply text-white relative bg-transparent cursor-pointer select-none touch-manipulation transition-all duration-200;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 8px 20px;
+  outline: 0;
+  border: 1px solid white;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #7DC23F;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 10px 32px;
+  }
 }
 
 .text-wrapper {
@@ -22,3 +55,49 @@
   font-family: 'Inter', sans-serif;
 }
 
+.nav-actions {
+  @apply hidden md:flex items-center gap-10;
+}
+
+.burger-menu {
+  @apply block md:hidden cursor-pointer transition-transform duration-300 relative w-8 h-6;
+}
+
+.bar {
+  @apply absolute left-0 w-full h-0.5 bg-white rounded-full transition-all duration-300;
+}
+
+.bar.top {
+  top: 0;
+}
+
+.bar.middle {
+  top: 50%;
+  @apply -translate-y-1/2;
+}
+
+.bar.bottom {
+  bottom: 0;
+}
+
+/* Animation when open */
+.burger-menu.open .bar.top {
+  @apply top-1/2 -translate-y-1/2 rotate-45;
+}
+
+.burger-menu.open .bar.middle {
+  @apply opacity-0 scale-0;
+}
+
+.burger-menu.open .bar.bottom {
+  @apply bottom-1/2 translate-y-1/2 -rotate-45;
+}
+
+.btn {
+  @apply text-white transition-all duration-300 cursor-pointer;
+}
+
+.btn-join {
+  @apply px-6 py-2 bg-[#039EE4] text-white font-bold rounded-full transition-all duration-300 cursor-pointer;
+  @apply hover:bg-[#0288c5] hover:scale-105 active:scale-95 shadow-md;
+}

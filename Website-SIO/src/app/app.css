@@ -1,7 +1,7 @@
 @reference "../styles.css";
 
 .main-content {
-    @apply pt-20 min-h-screen flex flex-col;
+    @apply min-h-screen flex flex-col;
 }
 
 .content-wrapper {

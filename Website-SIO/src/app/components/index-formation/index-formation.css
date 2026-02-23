@@ -1,0 +1,71 @@
+@reference "../../../styles.css";
+
+.formation-section {
+    @apply relative z-20 pb-10;
+}
+
+.formation-container {
+    @apply container mx-auto px-5 py-5 bg-gray-100 rounded-[3rem] max-w-7xl -mt-32;
+}
+
+.formation-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.formation-card {
+    @apply bg-white p-12 rounded-[2rem] shadow-xl flex flex-col items-center text-center transition-all duration-300;
+    @apply hover:-translate-y-2 hover:shadow-2xl;
+}
+
+.card-icon {
+    @apply text-gray-800 mb-8;
+}
+
+.card-title {
+    @apply text-xl font-bold mb-4 tracking-tight leading-tight text-gray-900;
+}
+
+.card-description {
+    @apply text-gray-600 text-sm leading-relaxed max-w-[250px];
+}
+
+/* Info Card Styles */
+.info-card-wrapper {
+    @apply container mx-auto px-5 py-8 bg-gray-100 rounded-[3rem] max-w-2xl mt-16;
+}
+
+.formation-info-card {
+    @apply mx-auto w-full bg-white flex flex-col md:flex-row rounded-[2rem] overflow-hidden shadow-2xl;
+}
+
+.info-content {
+    @apply flex-1 p-8 md:p-12 flex flex-col justify-center;
+}
+
+.info-tag {
+    @apply text-gray-900 font-bold text-xs md:text-sm uppercase tracking-widest mb-4 block;
+}
+
+.info-title {
+    @apply text-xl md:text-2xl font-light text-gray-900 leading-tight mb-6;
+}
+
+.info-title strong {
+    @apply font-bold;
+}
+
+.info-description {
+    @apply text-gray-700 text-xs md:text-sm leading-relaxed font-medium;
+}
+
+.info-image-container {
+    @apply flex-1 h-[300px] md:h-auto overflow-hidden;
+}
+
+.info-image {
+    @apply w-full h-full object-cover transition-transform duration-700;
+}
+
+.formation-info-card:hover .info-image {
+    @apply scale-105;
+}
