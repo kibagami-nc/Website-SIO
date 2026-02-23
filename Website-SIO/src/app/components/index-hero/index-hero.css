@@ -1,5 +1,14 @@
 @reference "../../../styles.css";
 
+.hero-background {
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../background.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
 .hero-section {
     @apply flex flex-col items-center justify-center text-center pt-48 pb-20 min-h-[60vh];
 }
