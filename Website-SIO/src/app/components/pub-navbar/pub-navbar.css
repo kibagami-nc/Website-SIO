@@ -2,7 +2,7 @@
 
 .navbar-container {
   @apply fixed top-0 left-0 w-full z-[100] h-20;
-  @apply backdrop-blur-[4px] bg-white/5;
+  @apply backdrop-blur-[10px] bg-white/15;
 }
 
 .navbar-content {
@@ -20,7 +20,7 @@
   letter-spacing: 0.5px;
   padding: 8px 20px;
   outline: 0;
-  border: 1px solid white;
+  border: 2px solid #818181;
 }
 
 .button-52:after {
@@ -94,7 +94,7 @@
 }
 
 .btn {
-  @apply text-white transition-all duration-300 cursor-pointer;
+  @apply transition-all duration-300 cursor-pointer;
 }
 
 .btn-join {

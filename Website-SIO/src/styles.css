@@ -5,3 +5,7 @@
     --breakpoint-md: 1200px;
     --breakpoint-lg: 1200px;
 }
+
+body {
+  @apply bg-gray-300;
+}

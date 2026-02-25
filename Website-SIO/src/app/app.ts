@@ -4,10 +4,11 @@ import { NavbarComponent } from './components/pub-navbar/pub-navbar';
 import { HeroComponent } from './components/index-hero/index-hero';
 import { FormationComponent } from './components/index-formation/index-formation';
 import { FooterComponent } from './components/pub-footer/pub-footer';
+import { WorkComponent } from './components/index-work/index-work'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, FormationComponent, FooterComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, FormationComponent, FooterComponent, WorkComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

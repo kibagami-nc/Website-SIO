@@ -8,10 +8,18 @@
 
     <!-- Navbar Buttons -->
     <div class="nav-actions">
-      <button class="btn">Accueil</button>
-      <button class="btn">Métiers</button>
-      <button class="btn">Témoignages</button>
-      <button class="btn">Professeurs</button>
+      <button class="btn transition-all duration-300 cursor-pointer" [class.text-white]="!isScrolled" [class.text-black]="isScrolled">
+        Accueil
+      </button>
+      <button class="btn transition-all duration-300 cursor-pointer" [class.text-white]="!isScrolled" [class.text-black]="isScrolled">
+        Métiers
+      </button>
+      <button class="btn transition-all duration-300 cursor-pointer" [class.text-white]="!isScrolled" [class.text-black]="isScrolled">
+        Témoignages
+      </button>
+      <button class="btn transition-all duration-300 cursor-pointer" [class.text-white]="!isScrolled" [class.text-black]="isScrolled">
+        Professeurs
+      </button>
       <button class="btn-join">Nous rejoindre</button>
     </div>
 
