@@ -21,40 +21,166 @@
 }
 
 .circles-grid-layout {
-    @apply w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8 items-start mt-8;
+    @apply w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-12 justify-items-center items-start mt-20 mx-auto;
 }
 
 .option-circle {
-    @apply bg-white w-64 h-64 md:w-72 md:h-72 rounded-full shadow-lg flex flex-col items-center justify-center p-8 text-center transition-transform hover:scale-105 border border-gray-100 mx-auto;
+    @apply bg-white w-100 h-100 md:w-112 md:h-112 rounded-full shadow-lg flex flex-col items-center justify-center p-12 text-center transition-all duration-500 hover:scale-110 border border-gray-100 relative;
+}
+
+.option-circle:nth-child(1) {
+    @apply md:-translate-y-8 md:translate-x-4;
+}
+
+.option-circle:nth-child(2) {
+    @apply md:translate-y-12 md:-translate-x-6;
+}
+
+.option-circle:nth-child(3) {
+    @apply md:-translate-y-4 md:-translate-x-8;
+}
+
+.option-circle:nth-child(4) {
+    @apply md:translate-y-16 md:translate-x-10;
+}
+
+.slam-circle {
+    @apply items-start pl-16;
+}
+
+.slam-text-content {
+    @apply text-left pr-8;
 }
 
 .circle-icon {
-    @apply mb-4 p-3 bg-sky-50 rounded-full;
+    @apply mb-6 p-5 bg-sky-50 rounded-full flex items-center justify-center;
 }
 
 .circle-title {
-    @apply text-lg font-bold text-gray-900 mb-2 uppercase tracking-wide;
+    @apply text-xl font-bold text-gray-900 mb-4 uppercase tracking-widest;
 }
 
 .circle-description {
-    @apply text-gray-600 text-xs md:text-sm leading-tight;
+    @apply text-gray-600 text-base leading-relaxed;
 }
 
-/* Specific position adjustments for 3 circles */
-.pos-left {
-    @apply md:justify-self-start;
-}
-
-.pos-middle {
-    @apply md:justify-self-center;
-}
-
-.pos-bottom {
-    @apply md:justify-self-end;
+@media (max-width: 1024px) {
+    .circles-grid-layout {
+        @apply max-w-4xl gap-8;
+    }
 }
 
 @media (max-width: 768px) {
     .circles-grid-layout {
-        @apply grid-cols-1;
+        @apply grid-cols-1 gap-12;
+    }
+
+    .option-circle {
+        @apply w-80 h-80 p-10;
+    }
+
+    .slam-circle {
+        @apply items-center pl-10;
+    }
+
+    .slam-text-content {
+        @apply text-center pr-0;
+    }
+}
+
+/* Career Info Section */
+.career-info-wrapper {
+    @apply w-full max-w-7xl mx-auto mt-24 px-4;
+}
+
+.career-info-card {
+    @apply mx-auto w-full bg-white flex flex-col md:flex-row rounded-[2rem] overflow-hidden shadow-2xl;
+}
+
+.career-text-column {
+    @apply flex-1 p-10 md:p-16 flex flex-col justify-center;
+}
+
+.career-main-title {
+    @apply text-4xl md:text-5xl font-bold text-gray-900 mb-8;
+}
+
+.career-main-description {
+    @apply text-gray-600 text-base md:text-lg leading-relaxed mb-12 max-w-2xl;
+}
+
+.career-specialties-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-12 mt-4;
+}
+
+.specialty-item {
+    @apply flex flex-col;
+}
+
+.specialty-header {
+    @apply flex flex-col mb-6;
+}
+
+.specialty-icon-box {
+    @apply w-16 h-12 border-4 border-sky-400 flex items-center justify-center mb-6 rounded-sm;
+}
+
+.specialty-icon-box.squares {
+    @apply border-none p-0;
+}
+
+.specialty-icon-box.squares svg {
+    @apply w-16 h-16 text-sky-400;
+}
+
+.specialty-icon-text {
+    @apply text-sky-400 font-black text-xl tracking-tighter;
+}
+
+.specialty-title {
+    @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.specialty-list {
+    @apply space-y-2;
+}
+
+.specialty-list li {
+    @apply text-gray-600 text-sm flex items-start before:content-['•'] before:mr-2 before:text-gray-900 before:font-bold;
+}
+
+.career-image-column {
+    @apply flex-1 h-[300px] md:h-auto overflow-hidden;
+}
+
+.career-image-container {
+    @apply w-full h-full overflow-hidden;
+}
+
+.career-student-image {
+    @apply w-full h-full object-cover transition-transform duration-700;
+}
+
+.career-info-card:hover .career-student-image {
+    @apply scale-105;
+}
+
+@media (max-width: 1024px) {
+    .career-main-title {
+        @apply text-3xl;
+    }
+
+    .career-text-column {
+        @apply p-8;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-info-card {
+        @apply flex-col;
+    }
+
+    .career-image-column {
+        @apply h-96;
     }
 }

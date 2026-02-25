@@ -1,8 +1,12 @@
 @reference "../../../styles.css";
 
 .navbar-container {
-  @apply fixed top-0 left-0 w-full z-[100] h-20;
-  @apply backdrop-blur-[10px] bg-white/15;
+  @apply fixed top-0 left-0 w-full z-[100] h-20 transition-all duration-300;
+  @apply bg-transparent backdrop-blur-none;
+}
+
+.navbar-container.scrolled {
+  @apply backdrop-blur-[10px] bg-white/15 shadow-sm;
 }
 
 .navbar-content {
