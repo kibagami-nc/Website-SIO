@@ -98,19 +98,19 @@
 }
 
 .career-text-column {
-    @apply flex-1 p-10 md:p-16 flex flex-col justify-center;
+    @apply flex-1 p-8 md:p-12 flex flex-col justify-center;
 }
 
 .career-main-title {
-    @apply text-4xl md:text-5xl font-bold text-gray-900 mb-8;
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6;
 }
 
 .career-main-description {
-    @apply text-gray-600 text-base md:text-lg leading-relaxed mb-12 max-w-2xl;
+    @apply text-gray-600 text-sm md:text-base leading-relaxed mb-8 max-w-xl;
 }
 
 .career-specialties-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 gap-12 mt-4;
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-8 mt-2;
 }
 
 .specialty-item {
@@ -122,7 +122,7 @@
 }
 
 .specialty-icon-box {
-    @apply w-16 h-12 border-4 border-sky-400 flex items-center justify-center mb-6 rounded-sm;
+    @apply w-14 h-10 border-4 border-sky-400 flex items-center justify-center mb-4 rounded-sm;
 }
 
 .specialty-icon-box.squares {
@@ -130,11 +130,11 @@
 }
 
 .specialty-icon-box.squares svg {
-    @apply w-16 h-16 text-sky-400;
+    @apply w-14 h-14 text-sky-400;
 }
 
 .specialty-icon-text {
-    @apply text-sky-400 font-black text-xl tracking-tighter;
+    @apply text-sky-400 font-black text-lg tracking-tighter;
 }
 
 .specialty-title {
@@ -182,5 +182,72 @@
 
     .career-image-column {
         @apply h-96;
+    }
+}
+
+/* Admission Info Section */
+.admission-info-wrapper {
+    @apply w-full max-w-7xl mx-auto mt-24 px-4 pb-20;
+}
+
+.admission-info-card {
+    @apply mx-auto w-full bg-white flex flex-col md:flex-row rounded-[2rem] overflow-hidden shadow-2xl;
+}
+
+.admission-image-column {
+    @apply flex-1 h-[300px] md:h-auto overflow-hidden;
+}
+
+.admission-image-container {
+    @apply w-full h-full overflow-hidden;
+}
+
+.admission-student-image {
+    @apply w-full h-full object-cover transition-transform duration-700;
+}
+
+.admission-info-card:hover .admission-student-image {
+    @apply scale-105;
+}
+
+.admission-text-column {
+    @apply flex-[1.2] p-10 md:p-16 flex flex-col justify-center;
+}
+
+.admission-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16;
+}
+
+.admission-grid-item {
+    @apply flex flex-col;
+}
+
+.admission-icon-box {
+    @apply mb-4;
+}
+
+.admission-item-title {
+    @apply text-lg font-bold text-gray-900 mb-3 tracking-wide;
+}
+
+.admission-item-description {
+    @apply text-gray-600 text-sm leading-relaxed;
+}
+
+@media (max-width: 768px) {
+    .admission-info-card {
+        @apply flex-col;
+    }
+
+    .admission-image-column {
+        @apply h-80;
+    }
+
+    .admission-text-column {
+        @apply p-8;
+    }
+
+    .admission-grid {
+        @apply gap-y-12;
     }
 }
